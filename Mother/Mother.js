@@ -11,11 +11,11 @@ function meMum() {
 function stahp() {
 	document.getElementById("mum").id = "stahped";
 	document.getElementById("stahped").innerHTML = "&nbsp;";
-	document.getElementById("button").innerHTML = "<button onclick='go()'>Go</button>";
+	document.getElementById("button").innerHTML = "<button onclick='go()'>Start</button>";
 	};
 function go() {
 	document.getElementById("stahped").id = "mum";
-	document.getElementById("button").innerHTML = "<button onclick='stahp()'>Stahp</button>";
+	document.getElementById("button").innerHTML = "<button onclick='stahp()'>Stop</button>";
 	};
     setInterval(yourMother, 1000)
     setInterval(backToMother, 850)
