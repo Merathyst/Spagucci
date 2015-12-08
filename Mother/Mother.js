@@ -1,4 +1,5 @@
 var mom = document.getElementById("mum");
+var div = document.getElementById("changingDiv");
 function yourMother() {
     document.getElementById("mum").innerHTML = "Your Mother";
 };
@@ -17,6 +18,16 @@ function go() {
 	document.getElementById("stahped").id = "mum";
 	document.getElementById("button").innerHTML = "<button onclick='stahp()'>Stop</button>";
 	};
-    setInterval(yourMother, 1000)
-    setInterval(backToMother, 850)
-    setInterval(meMum, 600)
+function blueToRed() {
+	if (document.getElementById("changingDiv").style.backgroundColor = "#0000ff") {
+	document.getElementById("changingDiv").style.backgroundColor = "#ff0000";
+	document.getElementById("testButton").innerHTML = "Blue";
+	}
+	else {
+	document.getElementById("changingDiv").style.backgroundColor = "#0000ff";
+	document.getElementById("testButton").innerHTML = "Red";
+	}
+};
+    setInterval(yourMother, 1000);
+    setInterval(backToMother, 850);
+    setInterval(meMum, 600);
