@@ -19,7 +19,7 @@ function go() {
 	document.getElementById("button").innerHTML = "<button onclick='stahp()'>Stop</button>";
 	};
 function blueToRed() {
-	if (document.getElementById("changingDiv").style.backgroundColor = "#0000ff") {
+	if () {
 	document.getElementById("changingDiv").style.backgroundColor = "#ff0000";
 	document.getElementById("testButton").innerHTML = "Blue";
 	}
