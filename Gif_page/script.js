@@ -1,3 +1,3 @@
-function mouseOver(){
-	document.getElementsByClassName("navigationDiv").style.color = "red";
-}
+function over(x){
+	x.style.backgroundColor = "red";
+};
