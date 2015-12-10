@@ -10,6 +10,15 @@ function over(x){
 function out(x){
 	x.style.backgroundColor = "#00bbbb";
 };
+function mainPageClick(x) {
+if (x.innerHTML === "boi"){
+	x.innerHTML = "This is an idiotic website.<br>Have fun.";
+	}
+	else {
+	var newVar = prompt();
+	x.innerHTML = newVar;
+	}
+};
 </script>
 </head>
 <body>
@@ -17,7 +26,10 @@ function out(x){
 <div id="tab1" class="navigationDiv" onmouseover="over(this)" onmouseout="out(this)">1</div>
 <div id="tab2" class="navigationDiv" onmouseover="over(this)" onmouseout="out(this)">2</div>
 <div id="tab3" class="navigationDiv" onmouseover="over(this)" onmouseout="out(this)">3</div>
-<div id="tab4" class="navigationDiv" onmouseover="over(this)" onmouseout="out(this)">4</div>boi
+<div id="tab4" class="navigationDiv" onmouseover="over(this)" onmouseout="out(this)">4</div>
 </nav>
+<article>
+<p style="font-size: 16pt; text-align: center; color: red;" onclick="mainPageClick(this)">This is an idiotic website.<br>Have fun.</p>
+</article>
 </body>
 </html>
