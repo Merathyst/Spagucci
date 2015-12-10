@@ -1,3 +1,3 @@
 function mouseOver(){
-	document.getElementsByClassName("navigationDiv")
+	document.getElementsByClassName("navigationDiv").style.color = "red";
 }
