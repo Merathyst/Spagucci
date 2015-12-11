@@ -11,15 +11,90 @@ function out(x){
 	x.style.backgroundColor = "#00bbbb";
 };
 function mainPageClick(x) {
-if (x.innerHTML === "boi"){
-	x.innerHTML = "This is an idiotic website.<br>Have fun.";
+	var stuff = x.innerHTML
+	x.innerHTML = stuff + "<br>" + prompt();
+};
+function noDiv() {
+	if (document.getElementById("anneDiv").style.width === "50%"){
+	document.getElementById("anneDiv").style.width = "0px";
+	document.getElementById("anneDiv").style.height = "0px";
+	document.getElementById("noDivButton").innerHTML = "More div";
 	}
 	else {
-	var newVar = prompt();
-	x.innerHTML = newVar;
+	document.getElementById("anneDiv").style.width = "50%";
+	document.getElementById("anneDiv").style.height = "200px";
+	document.getElementById("noDivButton").innerHTML = "No div";
 	}
 };
+function switchCase(x) {
+	switch (x.id) {
+	case "changingDiv":
+	x.style.backgroundColor = "#0000ff";
+	x.id = "changingDiv1"
+	break;
+	case "changingDiv1":
+	x.style.backgroundColor = "#00ff00"
+	x.id = "changingDiv2"
+	break;
+	case "changingDiv2":
+	x.style.backgroundColor = "#ff0000"
+	x.id = "changingDiv"
+	break;
+	default:
+	x.innerHTML = "<span style='font-weight: bold; font-size: 18pt; color: #aa0000;'>You've somehow broken the system. Great job! You're learning, and so are we. File a bug complaint at <span style='color: #00ffff;'>icouldntcareless@cryforme.l0s3r</span></span>";
+	break;
+	};
+};
+setInterval()
 </script>
+<style>
+body {
+-webkit-user-select: none;        
+-moz-user-select: none;
+-ms-user-select: none;
+-o-user-select: none;
+user-select: none;
+}
+.myButton {
+	-moz-box-shadow: 0px 10px 14px -7px #276873;
+	-webkit-box-shadow: 0px 10px 14px -7px #276873;
+	box-shadow: 0px 10px 14px -7px #276873;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #599bb3), color-stop(1, #408c99));
+	background:-moz-linear-gradient(top, #599bb3 5%, #408c99 100%);
+	background:-webkit-linear-gradient(top, #599bb3 5%, #408c99 100%);
+	background:-o-linear-gradient(top, #599bb3 5%, #408c99 100%);
+	background:-ms-linear-gradient(top, #599bb3 5%, #408c99 100%);
+	background:linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#599bb3', endColorstr='#408c99',GradientType=0);
+	background-color:#599bb3;
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	border-radius:8px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:12px;
+	font-weight:bold;
+	padding:7px 16px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #3d768a;
+}
+.myButton:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #408c99), color-stop(1, #599bb3));
+	background:-moz-linear-gradient(top, #408c99 5%, #599bb3 100%);
+	background:-webkit-linear-gradient(top, #408c99 5%, #599bb3 100%);
+	background:-o-linear-gradient(top, #408c99 5%, #599bb3 100%);
+	background:-ms-linear-gradient(top, #408c99 5%, #599bb3 100%);
+	background:linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#408c99', endColorstr='#599bb3',GradientType=0);
+	background-color:#408c99;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+</style>
 </head>
 <body>
 <nav>
@@ -28,8 +103,12 @@ if (x.innerHTML === "boi"){
 <div id="tab3" class="navigationDiv" onmouseover="over(this)" onmouseout="out(this)">3</div>
 <div id="tab4" class="navigationDiv" onmouseover="over(this)" onmouseout="out(this)">4</div>
 </nav>
+<button onclick="noDiv()" id="noDivButton">No div</button>
+<div id="anneDiv" onMouseOver="parent.location='http://akk.li/pics/anne.jpg'" style="margin-left: 25%; margin-right: 25%; height: 200px; width: 50%; background-color: green;"></div>-->
+</nav>
 <article>
-<p style="font-size: 16pt; text-align: center; color: red;" onclick="mainPageClick(this)">This is an idiotic website.<br>Have fun.</p>
+<p style="font-size: 16pt; text-align: center; color: red;" onclick="mainPageClick(this)">CSS can go cut.</p>
 </article>
+<div style="text-align: center; width: 100px; height: 100px; background-color: #ffffff;" id="changingDiv" onclick="switchCase(this)"><span class="myButton">testText</div></div>
 </body>
 </html>
