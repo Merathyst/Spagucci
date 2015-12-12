@@ -1,3 +1,1 @@
-function mouseOver(){
-	document.getElementsByClassName("navigationDiv")
-}
+    setInterval(switchCase(document.getElementsByClassName(".changingDiv")), 600);
