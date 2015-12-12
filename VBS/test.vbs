@@ -1,4 +1,4 @@
 function test
-wscript.echo ("Window")
+wscript.echo (My.User.Name)
 end function
 test

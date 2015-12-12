@@ -1,3 +1,1 @@
-function over(x){
-	x.style.backgroundColor = "red";
-};
+    setInterval(switchCase(document.getElementsByClassName(".changingDiv")), 600);

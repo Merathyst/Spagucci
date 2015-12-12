@@ -3,6 +3,7 @@
 <!-- Badda Bing Badda Boom, Space Jam Copyright 1996 -->
 <head>
 <link rel="stylesheet" type="text/css" href="style.css">
+<!--<script src="script.js">-->
 <script>
 function over(x){
 	x.style.backgroundColor = "#00cccc";
@@ -26,6 +27,10 @@ function noDiv() {
 	document.getElementById("noDivButton").innerHTML = "No div";
 	}
 };
+function noGif() {
+	document.getElementsByTagName("img").style.width = "0px";
+	document.getElementsByTagName("img").style.height = "0px";
+	};
 function switchCase(x) {
 	switch (x.id) {
 	case "changingDiv":
@@ -45,7 +50,9 @@ function switchCase(x) {
 	break;
 	};
 };
-setInterval()
+function intervalFunction() {
+    setInterval(switchCase(document.getElementsByClassName(".changingDiv")), 600);
+};
 </script>
 <style>
 body {
@@ -104,11 +111,13 @@ user-select: none;
 <div id="tab4" class="navigationDiv" onmouseover="over(this)" onmouseout="out(this)">4</div>
 </nav>
 <button onclick="noDiv()" id="noDivButton">No div</button>
-<div id="anneDiv" onMouseOver="parent.location='http://akk.li/pics/anne.jpg'" style="margin-left: 25%; margin-right: 25%; height: 200px; width: 50%; background-color: green;"></div>-->
+<!--<div id="anneDiv" onMouseOver="parent.location='http://akk.li/pics/anne.jpg'" style="margin-left: 25%; margin-right: 25%; height: 200px; width: 50%; background-color: green;"></div>-->
 </nav>
+<button onclick="noGif()">No gif</button>
 <article>
+<!--<div style="width: 0px; height: 0px;"><img src="gif.gif"><img src="lightswitch.gif"></div>-->
 <p style="font-size: 16pt; text-align: center; color: red;" onclick="mainPageClick(this)">CSS can go cut.</p>
 </article>
-<div style="text-align: center; width: 100px; height: 100px; background-color: #ffffff;" id="changingDiv" onclick="switchCase(this)"><span class="myButton">testText</div></div>
+<div style="text-align: center; width: 100px; height: 100px; background-color: #ffffff;" id="changingDiv" onclick="setInterval(switchCase(this), 600);" class="changingDiv"><span class="myButton">testText</span></div></div>
 </body>
 </html>
