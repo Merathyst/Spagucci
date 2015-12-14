@@ -13,9 +13,13 @@ function out(x){
 };
 function mainPageClick(x) {
 	var stuff = x.innerHTML
-	x.innerHTML = stuff + "<br>" + prompt();
+	var displayed = prompt();
+	x.innerHTML = stuff + "<br>" + displayed;
+	if (displayed === "h0i") {
+	document.getElementById("H0i").innerHTML = "<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><img src='' onclick='temSong(this)'>"
 };
-function noDiv() {
+};
+	function noDiv() {
 	if (document.getElementById("anneDiv").style.width === "50%"){
 	document.getElementById("anneDiv").style.width = "0px";
 	document.getElementById("anneDiv").style.height = "0px";
@@ -52,6 +56,10 @@ function switchCase(x) {
 };
 function intervalFunction() {
     setInterval(switchCase(document.getElementsByClassName(".changingDiv")), 600);
+};
+function tem(x) {
+	temStuff = x.innerHTML
+	x.innerHTML = temStuff + "<audio><source src='tem.mp3'></audio>"
 };
 </script>
 <style>
@@ -119,5 +127,6 @@ user-select: none;
 <p style="font-size: 16pt; text-align: center; color: red;" onclick="mainPageClick(this)">CSS can go cut.</p>
 </article>
 <div style="text-align: center; width: 100px; height: 100px; background-color: #ffffff;" id="changingDiv" onclick="setInterval(switchCase(this), 600);" class="changingDiv"><span class="myButton">testText</span></div></div>
+<p id="H0i"></p>
 </body>
 </html>
