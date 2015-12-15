@@ -9,7 +9,7 @@ function mainPageClick(x) {
 	var displayed = prompt();
 	x.innerHTML = stuff + "<br>" + displayed;
 	if (displayed === "h0i") {
-	document.getElementById("H0i").innerHTML = "<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><img src='tem.gif' style='width: 137px; height: 100px;' onclick='temSong(this)'>"
+	document.getElementById("H0i").innerHTML = "<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><img src='facade.gif' style='width: 137px; height: 100px;' onclick='n0thing(this)'>"
 };
 };
 	function noDiv() {
@@ -46,7 +46,7 @@ function switchCase(x) {
 function intervalFunction() {
     setInterval(switchCase, 600, [document.getElementsByClassName("changingDiv")]);
 };
-function temSong(x) {
-	temStuff = x.innerHTML
-	x.innerHTML = temStuff + "<audio autoplay='autoplay'><source src='tem.mp3' type='audio/mpeg'></audio>"
+function n0thing(x) {
+	noStuff = x.innerHTML
+	x.innerHTML = noStuff + "<audio autoplay='autoplay'><source src='facade.mp3' type='audio/mpeg'></audio>"
 };

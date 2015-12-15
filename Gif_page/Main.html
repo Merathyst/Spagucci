@@ -3,6 +3,10 @@
 <!-- Badda Bing Badda Boom, Space Jam Copyright 1996 -->
 <head>
 <link rel="stylesheet" type="text/css" href="style.css">
+<link rel="SHORTCUT ICON" href="Spagucci.ico" type="image/x-icon" />
+<link rel="ICON" href="Spagucci.ico" type="image/ico" />
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="jquerycode.js"></script>
 <script type="text/javascript" src="script.js"></script>
 </head>
 <body>
@@ -15,9 +19,9 @@
 <button onclick="setInterval(switchCase, 600, [document.getElementsByClassName('changingDiv')])" id="noDivButton">No div</button>
 <!--<div id="anneDiv" onMouseOver="parent.location='http://akk.li/pics/anne.jpg'" style="margin-left: 25%; margin-right: 25%; height: 200px; width: 50%; background-color: green;"></div>-->
 </nav>
-<button onclick="noGif(document.getElementById('gifDiv')">No gif</button>
+<button id="gifButton">No gif</button>
 <article>
-<!--<div style="width: 0px; height: 0px;" id="gifDiv"><img src="gif.gif"><img src="lightswitch.gif"></div>-->
+<article style="width: 100px; height: 100px; background-color: #ff0000;" id="gifArticle"><div id="gifDiv"><img src="gif.gif"><img src="lightswitch.gif"></div></article>
 <p style="font-size: 16pt; text-align: center; color: red;" onclick="mainPageClick(this)">CSS can go cut.</p>
 </article>
 <div style="text-align: center; width: 100px; height: 100px; background-color: #ffffff;" id="changingDiv" class="changingDiv"   onclick="switchCase(this)" ><span class="myButton">testText</span></div>
