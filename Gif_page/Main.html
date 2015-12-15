@@ -16,7 +16,7 @@ function mainPageClick(x) {
 	var displayed = prompt();
 	x.innerHTML = stuff + "<br>" + displayed;
 	if (displayed === "h0i") {
-	document.getElementById("H0i").innerHTML = "<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><img src='' onclick='temSong(this)'>"
+	document.getElementById("H0i").innerHTML = "<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><img src='tem.gif' style='width: 137px; height: 100px;' onclick='temSong(this)'>"
 };
 };
 	function noDiv() {
@@ -31,10 +31,6 @@ function mainPageClick(x) {
 	document.getElementById("noDivButton").innerHTML = "No div";
 	}
 };
-function noGif() {
-	document.getElementsByTagName("img").style.width = "0px";
-	document.getElementsByTagName("img").style.height = "0px";
-	};
 function switchCase(x) {
 	switch (x.id) {
 	case "changingDiv":
@@ -55,11 +51,11 @@ function switchCase(x) {
 	};
 };
 function intervalFunction() {
-    setInterval(switchCase(document.getElementsByClassName(".changingDiv")), 600);
+    setInterval(switchCase, 600, [document.getElementsByClassName("changingDiv")]);
 };
-function tem(x) {
+function temSong(x) {
 	temStuff = x.innerHTML
-	x.innerHTML = temStuff + "<audio><source src='tem.mp3'></audio>"
+	x.innerHTML = temStuff + "<audio autoplay='autoplay'><source src='tem.mp3' type='audio/mpeg'></audio>"
 };
 </script>
 <style>
@@ -118,15 +114,15 @@ user-select: none;
 <div id="tab3" class="navigationDiv" onmouseover="over(this)" onmouseout="out(this)">3</div>
 <div id="tab4" class="navigationDiv" onmouseover="over(this)" onmouseout="out(this)">4</div>
 </nav>
-<button onclick="noDiv()" id="noDivButton">No div</button>
+<button onclick="setInterval(switchCase, 600, [document.getElementsByClassName('changingDiv')])" id="noDivButton">No div</button>
 <!--<div id="anneDiv" onMouseOver="parent.location='http://akk.li/pics/anne.jpg'" style="margin-left: 25%; margin-right: 25%; height: 200px; width: 50%; background-color: green;"></div>-->
 </nav>
-<button onclick="noGif()">No gif</button>
+<button onclick="noGif(document.getElementById('gifDiv')">No gif</button>
 <article>
-<!--<div style="width: 0px; height: 0px;"><img src="gif.gif"><img src="lightswitch.gif"></div>-->
+<!--<div style="width: 0px; height: 0px;" id="gifDiv"><img src="gif.gif"><img src="lightswitch.gif"></div>-->
 <p style="font-size: 16pt; text-align: center; color: red;" onclick="mainPageClick(this)">CSS can go cut.</p>
 </article>
-<div style="text-align: center; width: 100px; height: 100px; background-color: #ffffff;" id="changingDiv" onclick="setInterval(switchCase(this), 600);" class="changingDiv"><span class="myButton">testText</span></div></div>
+<div style="text-align: center; width: 100px; height: 100px; background-color: #ffffff;" id="changingDiv" class="changingDiv"   onclick="switchCase(this)" ><span class="myButton">testText</span></div>
 <p id="H0i"></p>
 </body>
 </html>
